@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ticket</title>
+    <style>
+      body {
+        font-family: monospace;
+        padding: 20px;
+      }
+      .line {
+        border-top: 1px dashed #000;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>BOLETA DE VENTA</h2>
+    <div class="line"></div>
+    <p><strong>Producto:</strong> {{producto}}</p>
+    <p><strong>Cantidad:</strong> {{cantidad}}</p>
+    <p><strong>Total:</strong> ${{total}}</p>
+    <div class="line"></div>
+    <p>{{fecha}}</p>
+  </body>
+</html>
