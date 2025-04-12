@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:next\" \"npm run dev:electron\"",
     "dev:next": "cd renderer && npm run dev",
-    "dev:electron": "wait-on http://localhost:3000 && electron ."
+    "dev:electron": "npx electron ."
   },
   "dependencies": {
     "concurrently": "^9.1.2",
