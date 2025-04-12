@@ -24,7 +24,7 @@ async function printTicket({ producto, cantidad, total }) {
   const printWin = new BrowserWindow({
     width: 300,
     height: 600,
-    show: false, // Oculto
+    show: false,
   });
 
   printWin.loadURL(`data:text/html;charset=utf-8,${encodeURIComponent(ticketHTML)}`);

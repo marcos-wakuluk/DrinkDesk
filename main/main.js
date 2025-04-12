@@ -7,16 +7,15 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"), // 👈 importante
+      preload: path.join(__dirname, "preload.js"),
       contextIsolation: true,
       nodeIntegration: false,
     },
   });
 
-  win.loadURL("http://localhost:3000"); // o la ruta de tu app
+  win.loadURL("http://localhost:3000");
 }
 
-// Escuchar impresión
 ipcMain.on("imprimir-ticket", (event, data) => {
   const { producto, cantidad, total } = data;
   const ticket = `
@@ -27,7 +26,7 @@ ipcMain.on("imprimir-ticket", (event, data) => {
     -----------------
   `;
 
-  fs.writeFileSync("ticket.txt", ticket); // simula impresión real
+  fs.writeFileSync("ticket.txt", ticket);
 });
 
 app.whenReady().then(createWindow);
